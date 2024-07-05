@@ -1,5 +1,11 @@
 terraform {
-  required_providers {
+ cloud {
+    organization = "isbaksilog"
+    workspaces {
+      name = "isbak-workspace"
+    }
+  }
+ required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.19"
